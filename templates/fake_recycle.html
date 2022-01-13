@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+
+    <!-- CSS -->
+
+
+    <!-- Webpage Title -->
+    <title>Title</title>
+
+
+</head>
+<script>
+    function submit_user() {
+        let score = $('#score').val()
+        $.ajax({
+            type: "POST",
+            url: "/api/submit",
+            data: {score_give: score},
+            success: function (response) {
+                alert(response["msg"])
+                window.location.href = "/result"
+            }
+        });
+    }
+</script>
+<body>
+    <div class="login_pw">
+        <h4>score</h4>
+        <input type="text" placeholder="점수" id="score">
+    </div>
+    <div class="btns">
+        <div class="login_button">
+            <button type="submit" value="submit" onclick="submit_user()">접속</button>
+        </div>
+    </div>
+
+</body>
+</html>

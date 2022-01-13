@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+    <script defer src="../static/js/index.js"></script>
+
+    <!-- CSS -->
+
+
+    <!-- Webpage Title -->
+    <title>Title</title>
+
+
+</head>
+<body>
+
+    <div class="login">
+        <div class="login_upper_part">
+            <img class="logo" src="로고이미지">
+
+            <div class="sign_in_text">로그인이오.</div>
+        </div>
+        <div class="login_id">
+            <h4>몇동? 몇호?</h4>
+            <input type="text" placeholder="ex)101동 1101호 ->1011101" id="userid">
+        </div>
+        <div class="login_pw">
+            <h4>PW</h4>
+            <input type="password" placeholder="비밀번호 입력해주세요!" id="userpw">
+        </div>
+        <div class="btns">
+            <div class="login_button">
+                <button type="submit" value="submit" onclick="login()">접속</button>
+            </div>
+            <div class="signup_button">
+                <button type="submit" value="submit" onclick="register()">가입</button>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

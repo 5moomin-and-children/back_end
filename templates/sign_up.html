@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+    <script defer src="../static/js/sign_up.js"></script>
+
+    <!-- CSS -->
+
+
+    <!-- Webpage Title -->
+    <title>Title</title>
+
+</head>
+<body>
+    <div class="container">
+        <div class="signup">
+            <div class="signup_upper_part">
+                <img class="logo" src="로고">
+
+                <div class="sign_up_text">회원가입이오.</div>
+            </div>
+            <!-- email and 중복체킄  -->
+            <div class="signup_id">
+                <h4>어디사니?</h4>
+                <div class="input_part">
+                    <input type="text" id="userid" placeholder="ex)101동 1101호 ->1011101">
+                    <div class="id_confirm_button">
+                        <button type="submit" value="submit" onclick="confirmEmail()">중복 확인</button>
+                    </div>
+                </div>
+            </div>
+            <!-- pw  -->
+            <div class="signup_pw">
+                <h4>비밀번호</h4>
+                <input type="password" id="password1" onchange="check_pw()" placeholder="비밀번호를 입력하시오!">
+            </div>
+            <!-- pw confirm -->
+            <div class="signup_pw_confirm">
+                <h4>비밀번호 확인</h4>
+                <div class="input_pw_part">
+                    <input type="password" id="password2" placeholder="비밀번호를 확인해보겠소."
+                           onchange="check_pw()">
+                    <span id="check"></span>
+                </div>
+            </div>
+            <div class="signup_button">
+                <button type="submit" value="submit" onclick="register()">가입</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
